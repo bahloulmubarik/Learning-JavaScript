@@ -73,11 +73,34 @@
 //     console.log(Heros[idx]);
 // }()
 
-let marks = [12,24,43,53,64]; //sum and average of array elements
-let sum = 0; //initialize sum to 0
+// let marks = [12,24,43,53,64]; //sum and average of array elements
+// let sum = 0; //initialize sum to 0
 
-for(let val of marks){ //for each loop
-    sum += val; //add each element to sum
+// for(let val of marks){ //for each loop
+//     sum += val; //add each element to sum
+// }
+// let avg = sum / marks.length;  //calculate average by dividing sum by number of elements in array 
+// console.log(`The average is: ${avg}`); //print average to console 
+
+
+// we have given arrays of numbers
+// let numbers = [12,45,67,89,23,90]; these are the prices and we have 10% discount on all prices
+//after discount we have to print new prices
+
+// let numbers = [12,45,67,89,23,90];
+// let discountedPrices = [];
+
+// for (let price of numbers){
+//     let discountedPrice = price - (price * 0.10);
+//     discountedPrices.push(discountedPrice);
+// }
+// console.log(discountedPrices);
+
+//functions
+
+function myFunction(){
+    console.log("Hello from myFunction!");
+    console.log("This is a simple function example.");
 }
-let avg = sum / marks.length;  //calculate average by dividing sum by number of elements in array 
-console.log(`The average is: ${avg}`); //print average to console 
+
+myFunction(); //calling the function
