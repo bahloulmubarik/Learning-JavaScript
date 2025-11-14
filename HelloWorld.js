@@ -98,9 +98,51 @@
 
 //functions
 
-function myFunction(){
-    console.log("Hello from myFunction!");
-    console.log("This is a simple function example.");
-}
+// function myFunction(){
+//     console.log("Hello from myFunction!");
+//     console.log("This is a simple function example.");
+// }
 
-myFunction(); //calling the function
+// myFunction(); //calling the function
+
+//function-sum
+
+// function sum(a, b){ //function definition with parameters
+//     return a + b; //returning the sum of a and b 
+// }
+// let result = sum(5, 10); //function call with arguments 5 and 10
+// console.log("The sum is:", result); //printing the result to console
+
+// /* Output:
+// The sum is: 15
+//     */
+
+    // function sum(a, b){ //function definition with parameters
+    //     return a + b; //returning the sum of a and b
+    // }
+    //  const arrowSum = (a, b) => { //arrow function definition
+    //     return a + b; //returning the sum of a and b
+    // }
+    // //multipication function
+    // function multiply(a , b){
+    //     return a * b;
+    // }  
+    // const arrowMultiply = (a , b) => {
+    //     return a * b;
+    // } 
+    //  //function call     
+
+    //create a fucntion that reture vowel count in a string and in hello world
+
+    function countVowels(str){
+        let count = 0;
+        const vowels = "aeiouAEIOU"; //string containing all vowels
+
+        for (let char of str){
+            if (vowels.includes(char)){
+                count++;
+            } 
+        }
+        return count;
+    }
+    console.log(countVowels("Hello World")); 
