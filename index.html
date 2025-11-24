@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BPay Mini Bank</title>
+</head>
+<body>
+
+    <!-- Welcome Page -->
+    <div id="welcomeScreen"> 
+        <h1>Welcome to BPay</h1>
+        <p>Your Mini Bank Simulator</p>
+        <button id="loginBtn">Login / Create Account</button>
+    </div>
+
+    <!-- Create Account Form -->
+    <div id="createAccountForm" class="hidden">
+        <h2>Create Your Account</h2>
+        <input type="text" id="name" placeholder="Enter your name" /><br>
+        <input type="email" id="email" placeholder="Enter your email" /><br>
+        <input type="password" id="password" placeholder="Enter your password" /><br>
+        <button id="createBtn">Create Account</button>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="hidden">
+        <h2>Dashboard</h2>
+        <p>Welcome, <span id="userName"></span></p>
+        <p>Current Balance: $<span id="balance">0</span></p>
+
+        <input type="number" id="depositAmount" placeholder="Enter deposit amount" />
+        <button id="depositBtn">Deposit</button><br>
+
+        <input type="number" id="withdrawAmount" placeholder="Enter withdraw amount" />
+        <button id="withdrawBtn">Withdraw</button>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
