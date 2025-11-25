@@ -1,16 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock paper scissors game</title>
+    <title>BPay Mini Bank</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock paper scissors</h1>
-    <div class="choices">
-        <div class="choice" id="rock">
-            <h2>Rock</h2>
-            <img src="images/rock.png" alt="Rock" width="100" height="100">
+
+    <!-- Welcome Page -->
+    <div id="welcomeScreen" class="screen active"> 
+        <div class="container">
+            <h1>Welcome to BPay</h1>
+            <p class="subtitle">Your Mini Bank Simulator</p>
+            <p class="description">Manage your finances with ease</p>
+            <button id="createAccountBtn" class="btn btn-primary">Create Account</button>
+        </div>
     </div>
+
+    <!-- Create Account Form -->
+    <div id="createAccountForm" class="screen">
+        <div class="container">
+            <h2>Create Your Account</h2>
+            <form id="accountForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Enter your name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Enter your email" required />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Enter your password" required />
+                </div>
+                <button type="button" id="createBtn" class="btn btn-primary">Create Account</button>
+                <button type="button" id="backBtn" class="btn btn-secondary">Back</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="screen">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Dashboard</h2>
+                <button id="logoutBtn" class="btn btn-logout">Logout</button>
+            </div>
+            
+            <div class="welcome-section">
+                <p>Welcome, <span id="userName" class="user-name"></span>!</p>
+            </div>
+
+            <div class="balance-section">
+                <p class="balance-label">Current Balance</p>
+                <p class="balance-amount">$<span id="balance">0</span></p>
+            </div>
+
+            <div class="transaction-section">
+                <h3>Transactions</h3>
+                
+                <div class="transaction-group">
+                    <h4>Deposit Money</h4>
+                    <div class="form-group">
+                        <input type="number" id="depositAmount" placeholder="Enter amount" min="0" step="0.01" />
+                    </div>
+                    <button id="depositBtn" class="btn btn-success">Deposit</button>
+                </div>
+
+                <div class="transaction-group">
+                    <h4>Withdraw Money</h4>
+                    <div class="form-group">
+                        <input type="number" id="withdrawAmount" placeholder="Enter amount" min="0" step="0.01" />
+                    </div>
+                    <button id="withdrawBtn" class="btn btn-danger">Withdraw</button>
+                </div>
+            </div>
+
+            <div class="transaction-history">
+                <h3>Transaction History</h3>
+                <ul id="transactionList" class="transaction-list">
+                    <li class="empty-message">No transactions yet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="test.js"></script>
 </body>
 </html>
