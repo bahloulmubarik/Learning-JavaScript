@@ -14,7 +14,10 @@
             <h1>Welcome to BPay</h1>
             <p class="subtitle">Your Mini Bank Simulator</p>
             <p class="description">Manage your finances with ease</p>
-            <button id="createAccountBtn" class="btn btn-primary">Create Account</button>
+            <div class="welcome-actions">
+                <button id="createAccountBtn" class="btn btn-primary">Create Account</button>
+                <button id="showLoginBtn" class="btn btn-secondary">Login</button>
+            </div>
         </div>
     </div>
 
@@ -22,6 +25,7 @@
     <div id="createAccountForm" class="screen">
         <div class="container">
             <h2>Create Your Account</h2>
+            <div id="notification" class="notification" aria-live="polite"></div>
             <form id="accountForm">
                 <div class="form-group">
                     <input type="text" id="name" placeholder="Enter your name" required />
@@ -34,6 +38,23 @@
                 </div>
                 <button type="button" id="createBtn" class="btn btn-primary">Create Account</button>
                 <button type="button" id="backBtn" class="btn btn-secondary">Back</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="screen">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="signinForm">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required />
+                </div>
+                <button type="button" id="loginBtn" class="btn btn-primary">Login</button>
+                <button type="button" id="loginBackBtn" class="btn btn-secondary">Back</button>
             </form>
         </div>
     </div>

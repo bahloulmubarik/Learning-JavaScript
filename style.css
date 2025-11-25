@@ -173,6 +173,31 @@ input[type="number"]:focus {
     background: #da190b;
 }
 
+/* Notification */
+.notification {
+    position: relative;
+    min-height: 36px;
+    margin-bottom: 16px;
+}
+
+.notification .message {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.notification.success .message { background: #e6f4ea; color: #2e7d32; }
+.notification.error .message { background: #fdecea; color: #c62828; }
+.notification.info .message { background: #e8f0fe; color: #1558d6; }
+
+.welcome-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
 .dashboard-header {
     display: flex;
     justify-content: space-between;
